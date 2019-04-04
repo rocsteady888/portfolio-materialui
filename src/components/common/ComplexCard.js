@@ -43,7 +43,6 @@ class ComplexCard extends React.Component {
 
   handleExpandClick = () => {
     this.setState(state => ({ expanded: !state.expanded }));
-    console.log(this.props.image1)
   };
 
   render() {
