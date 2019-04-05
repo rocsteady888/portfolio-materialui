@@ -11,8 +11,8 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import githubLogo from '../../images/githubLogo.png'
 
 const styles = theme => ({
   card: {
@@ -76,7 +76,7 @@ class ComplexCard extends React.Component {
             <FavoriteIcon />
           </IconButton>
           <IconButton aria-label="Share">
-            <ShareIcon />
+            <img src={githubLogo} alt="github logo" />
           </IconButton>
           <IconButton
             className={classnames(classes.expand, {
