@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import resume from '../documents/Ryan O’Connor-word.docx';
 
 const styles = {
   root: {
@@ -40,7 +41,7 @@ function SimpleAppBar(props) {
           </Typography>
           <Button color="inherit" target="_blank" href="https://github.com/rocsteady888">Github</Button>
           <Button color="inherit" target="_blank" href="https://www.linkedin.com/in/ryanoconnor285/">LinkedIn</Button>
-          <Button color="inherit">Resume</Button>
+          <Button color="inherit" href={resume}>Resume</Button>
         </Toolbar>
         <Grid 
           container 
