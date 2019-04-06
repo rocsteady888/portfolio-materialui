@@ -10,8 +10,9 @@ import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Tooltip from '@material-ui/core/Tooltip';
+import Button from '@material-ui/core/Button'
 import githubLogo from '../../images/githubLogo.png'
 
 const styles = theme => ({
@@ -34,6 +35,9 @@ const styles = theme => ({
   },
   expandOpen: {
     transform: 'rotate(180deg)',
+  },
+  button: {
+    margin: theme.spacing.unit,
   },
 });
 
@@ -65,29 +69,53 @@ class ComplexCard extends React.Component {
           :
           null
         }
-        
         <CardContent>
+          {
+            this.props.deployedURL
+            ?
+            <Button
+              variant="contained"
+              color="primary"
+              target="_blank"
+              href={this.props.deployedURL}
+              className={classes.button}
+            >
+              Go to {this.props.title}
+            </Button>
+            : 
+            null
+          }
+
           <Typography component="p">
             {this.props.headline}
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-          <IconButton aria-label="Share">
-            <img src={githubLogo} alt="github logo" />
-          </IconButton>
-          <IconButton
-            className={classnames(classes.expand, {
-              [classes.expandOpen]: this.state.expanded,
-            })}
-            onClick={this.handleExpandClick}
-            aria-expanded={this.state.expanded}
-            aria-label="Show more"
-          >
-            <ExpandMoreIcon />
-          </IconButton>
+          {
+            this.props.githubURL
+            ?
+            <IconButton 
+            aria-label="github link" 
+            target="_blank" 
+              href={this.props.githubURL}
+            >
+              <img src={githubLogo} alt="github logo" />
+            </IconButton>
+            :
+            null
+          }
+          <Tooltip title="Details" placement="top-start">
+            <IconButton
+              className={classnames(classes.expand, {
+                [classes.expandOpen]: this.state.expanded,
+              })}
+              onClick={this.handleExpandClick}
+              aria-expanded={this.state.expanded}
+              aria-label="Show more"
+            >
+              <ExpandMoreIcon />
+            </IconButton>
+          </Tooltip>
         </CardActions>
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
           <CardContent>
@@ -100,7 +128,7 @@ class ComplexCard extends React.Component {
             <Typography paragraph>
               {this.props.paragraph3}
             </Typography>
-            <Typography>
+            <Typography paragraph>
               {this.props.paragraph4}
             </Typography>
           </CardContent>
