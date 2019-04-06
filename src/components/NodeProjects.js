@@ -28,6 +28,7 @@ function NodeProjects(props) {
             title={"Bamazon"}
             image1={bamazon1}
             date={"May 10, 2018"}
+            githubURL={"https://github.com/rocsteady888/bamazon"}
             headline={"Node CLI application with an Express sever and a MYSQL database. No frontend."}
             paragraph1={"The database stores each item with it's category, price and quantity."}
             paragraph2={"The user is able to use the arrow keys to navigate the menu and select and item and the quantity."}
@@ -39,6 +40,7 @@ function NodeProjects(props) {
             title={"Who's Who of Dr. Who"}
             image1={drwho1}
             date={"June 12, 2018"}
+            githubURL={"https://github.com/rocsteady888/interview-project2"}
             headline={"Node CLI application with an Express sever and a MYSQL database. No frontend."}
             paragraph1={"The database stores character information."}
             paragraph2={"The user is able to create, edit and delete from the list."}
