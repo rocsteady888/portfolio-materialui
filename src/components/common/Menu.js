@@ -40,10 +40,10 @@ class SimpleMenu extends React.Component {
             <Button fullWidth color="inherit" target="_blank" href={resumePDF}>Open New Tab</Button>
           </MenuItem>
           <MenuItem onClick={this.handleClose}>
-            <Button fullWidth color="inherit" href={resumePDF}>Download .pdf</Button>
+            <Button fullWidth color="inherit" href={resumePDF}>Download pdf</Button>
           </MenuItem>
           <MenuItem onClick={this.handleClose}>
-            <Button fullWidth color="inherit" href={resumeWord}>Download .docx</Button>
+            <Button fullWidth color="inherit" href={resumeWord}>Download docx</Button>
           </MenuItem>
         </Menu>
       </div>
