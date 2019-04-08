@@ -4,8 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 import ComplexCard from './common/ComplexCard';
 import Grid from '@material-ui/core/Grid';
 import aion1 from '../images/Aion/aion1.png';
-import aion2 from '../images/Aion/aion2.png';
-import aion3 from '../images/Aion/aion3.jpeg';
 
 const styles = theme => ({
   root: {
@@ -29,9 +27,7 @@ class ReactProjects extends React.Component {
             <ComplexCard
               title={"Aion"}
               image1={aion1}
-              image2={aion2}
-              image3={aion3}
-              date={"March 31, 2019"}
+              subheader={"Work productivity application"}
               deployedURL={"https://aion-mern.herokuapp.com/"}
               githubURL={"https://github.com/rocsteady888/aion"}
               headline={"React/Redux, Responsive Mobile First Design, Material UI, Node JS, Express, Mongoose, RESTful API, Passport JS, Moment JS, "}
@@ -44,7 +40,6 @@ class ReactProjects extends React.Component {
         </Grid>
       </div>
     );
-
   }
 }
 
