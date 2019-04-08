@@ -84,6 +84,9 @@ class ComplexCard extends React.Component {
           </Grid>
         </Grid>
         <CardContent>
+          <Typography component="p">
+            {this.props.headline}
+          </Typography>
           {
             this.props.deployedURL
             ?
@@ -99,10 +102,6 @@ class ComplexCard extends React.Component {
             : 
             null
           }
-
-          <Typography component="p">
-            {this.props.headline}
-          </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
           {
