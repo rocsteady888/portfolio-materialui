@@ -5,7 +5,7 @@ import ComplexCard from './common/ComplexCard';
 import Grid from '@material-ui/core/Grid';
 import aion1 from '../images/Aion/aion1.png';
 import aion2 from '../images/Aion/aion2.png';
-import aion3 from '../images/Aion/aion3.png';
+import aion3 from '../images/Aion/aion3.jpeg';
 
 const styles = theme => ({
   root: {
@@ -25,7 +25,7 @@ class ReactProjects extends React.Component {
     return (
       <div className={classes.root}>
         <Grid container spacing={24}>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6}>
             <ComplexCard
               title={"Aion"}
               image1={aion1}
@@ -40,10 +40,6 @@ class ReactProjects extends React.Component {
               paragraph3={"The front end uses the React and Redux libraries which make is super quick and responsive.  Nested components in this application will easily be reused in further development.  The functionality of Redux is being replaced React Hooks in any new development.  The application is also styled with Material UI which helps make all the components familar to users."}
               paragraph4={"This application was designed to be used on mobile for clocking in and out on the go.  Then tables are available on desktop or tablet to make reviewing the time card easy."}
             />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
           </Grid>
         </Grid>
       </div>
