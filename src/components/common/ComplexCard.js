@@ -56,10 +56,10 @@ class ComplexCard extends React.Component {
       <Card className={classes.card}>
         <CardHeader
           title={this.props.title}
-          subheader={this.props.date}
+          subheader={this.props.subheader}
         />
         <Grid container spacing={24}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12}>
             {
               this.props.image1
                 ?
