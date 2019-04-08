@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import classnames from 'classnames';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -17,7 +18,6 @@ import githubLogo from '../../images/githubLogo.png'
 
 const styles = theme => ({
   card: {
-    maxWidth: 400,
   },
   media: {
     height: 0,
@@ -58,17 +58,31 @@ class ComplexCard extends React.Component {
           title={this.props.title}
           subheader={this.props.date}
         />
-        {
-          this.props.image1
-          ?
-          <CardMedia
-            className={classes.media}
-            image={this.props.image1}
-            title={this.props.title}
-          />
-          :
-          null
-        }
+        <Grid container spacing={24}>
+          <Grid item xs={12} sm={6}>
+            {
+              this.props.image1
+                ?
+                <CardMedia
+                  className={classes.media}
+                  image={this.props.image1}
+                  title={this.props.title}
+                />
+                :
+                null
+            }
+          </Grid>
+          <Grid item xs={12} sm={6}>
+          </Grid>
+          <Grid item xs={6} sm={3}>
+          </Grid>
+          <Grid item xs={6} sm={3}>
+          </Grid>
+          <Grid item xs={6} sm={3}>
+          </Grid>
+          <Grid item xs={6} sm={3}>
+          </Grid>
+        </Grid>
         <CardContent>
           {
             this.props.deployedURL
