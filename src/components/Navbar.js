@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -43,20 +42,6 @@ function SimpleAppBar(props) {
           <Button color="inherit" target="_blank" href="https://www.linkedin.com/in/ryanoconnor285/">LinkedIn</Button>
           <Menu />
         </Toolbar>
-        <Grid 
-          container 
-          direction="row"
-          justify="center"
-          alignItems="center"
-          className={classes.headlineGrid}
-          spacing={24}
-        >
-          <Grid item xs={12} sm={8}>
-            <Typography color="inherit" className={classes.personalHeadline}>
-              I am a fullstack software engineer with a passion for producing web applications that solve problems and users will fall in love with.
-            </Typography>
-          </Grid>
-        </Grid>
       </AppBar>
     </div>
   );
