@@ -23,7 +23,7 @@ function SimpleMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        Open Menu
+        Resume
       </Button>
       <Menu
         id="simple-menu"
