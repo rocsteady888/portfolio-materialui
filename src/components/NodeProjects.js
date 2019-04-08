@@ -23,7 +23,7 @@ function NodeProjects(props) {
   return (
     <div className={classes.root}>
       <Grid container spacing={24}>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <ComplexCard
             title={"Bamazon"}
             image1={bamazon1}
@@ -35,7 +35,7 @@ function NodeProjects(props) {
             paragraph3={"The server returns the appropriate response or errors and then updates the database."}
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <ComplexCard
             title={"Who's Who of Dr. Who"}
             image1={drwho1}
