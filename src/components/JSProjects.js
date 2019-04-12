@@ -22,7 +22,7 @@ function JSProjects(props) {
   return (
     <div className={classes.root}>
       <Grid container spacing={24}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} md={4}>
           <ComplexCard
               title={"GifTastic"}
               image1={gifTastic}
