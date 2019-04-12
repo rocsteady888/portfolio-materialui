@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import JSProjects from './JSProjects';
 import NodeProjects from './NodeProjects';
 import ReactProjects from './ReactProjects';
 import AppBar from '@material-ui/core/AppBar';
@@ -46,11 +47,12 @@ class SimpleTabs extends React.Component {
           <Tabs value={value} onChange={this.handleChange}>
             <Tab label="React Apps" />
             <Tab label="Node JS" />
+            <Tab label="Javascript" />
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer><ReactProjects /></TabContainer>}
         {value === 1 && <TabContainer><NodeProjects /></TabContainer>}
-        {value === 2 && <TabContainer>Javascript</TabContainer>}
+        {value === 2 && <TabContainer><JSProjects /></TabContainer>}
       </div>
     );
   }
