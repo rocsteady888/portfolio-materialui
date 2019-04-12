@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ComplexCard from './common/ComplexCard';
 import Grid from '@material-ui/core/Grid';
-import bamazon1 from '../images/Bamazon/bamazon1.png';
-import drwho1 from '../images/WhosWho/drwho1.png';
+import bamazon1 from '../images/bamazon1.png';
+import drwho1 from '../images/drwho1.png';
 
 const styles = theme => ({
   root: {
@@ -23,7 +23,7 @@ function NodeProjects(props) {
   return (
     <div className={classes.root}>
       <Grid container spacing={24}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} md={4}>
           <ComplexCard
             title={"Bamazon"}
             image1={bamazon1}
@@ -35,7 +35,7 @@ function NodeProjects(props) {
             paragraph3={"The server returns the appropriate response or errors and then updates the database."}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} md={4}>
           <ComplexCard
             title={"Who's Who of Dr. Who"}
             image1={drwho1}
